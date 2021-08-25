@@ -15,6 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@electron/remote": "^1.2.0",
+    "cross-env": "^7.0.3",
     "devtron": "^1.4.0",
     "electron": "^13.1.4",
     "electron-builder": "^22.11.7",
@@ -29,7 +30,9 @@
       "buildResources": "build",
       "output": "dist"
     },
-    "publish": ["github"],
+    "publish": [
+      "github"
+    ],
     "mac": {
       "target": [
         "dmg",
