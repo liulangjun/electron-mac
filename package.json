@@ -1,0 +1,69 @@
+{
+  "name": "electron-p",
+  "version": "1.0.2",
+  "description": "electron-demo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch main.js --exec 'electron .'",
+    "dev": "electron .",
+    "pack": "electron-builder",
+    "icon": "electron-icon-builder --input=./public/logo.png --output=./build --flatten"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron/remote": "^1.2.0",
+    "devtron": "^1.4.0",
+    "electron": "^13.1.4",
+    "electron-builder": "^22.11.7",
+    "electron-icon-builder": "^2.0.1",
+    "nodemon": "^2.0.9"
+  },
+  "build": {
+    "appId": "333",
+    "productName": "Tasky33",
+    "copyright": "Copyright © 2021 Alaso",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "localhost:9000"
+      }
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "icon": "build/icons/icon.icns",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 180,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 700,
+        "height": 350
+      }
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.9"
+  }
+}
