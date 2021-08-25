@@ -122,7 +122,7 @@ function createWindow() {
 }
 app.whenReady().then(() => {
     createWindow()
-    checkUpdate() 
+    // checkUpdate() 
     
     // console.log(process.version);
 })
