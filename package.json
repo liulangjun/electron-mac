@@ -8,6 +8,7 @@
     "start": "nodemon --watch main.js --exec 'electron .'",
     "dev": "electron .",
     "pack": "electron-builder",
+    "release": "cross-env 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 electron-builder",
     "icon": "electron-icon-builder --input=./public/logo.png --output=./build --flatten"
   },
   "author": "",
@@ -28,12 +29,7 @@
       "buildResources": "build",
       "output": "dist"
     },
-    "publish": [
-      {
-        "provider": "generic",
-        "url": "localhost:9000"
-      }
-    ],
+    "publish": ["github"],
     "mac": {
       "target": [
         "dmg",
