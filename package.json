@@ -1,6 +1,6 @@
 {
   "name": "electron-p",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "electron-demo",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "nodemon --watch main.js --exec 'electron .'",
     "dev": "electron .",
     "pack": "electron-builder",
-    "release": "cross-env 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 electron-builder",
+    "release": "cross-env GITHUB_TOKEN=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 electron-builder",
     "icon": "electron-icon-builder --input=./public/logo.png --output=./build --flatten"
   },
   "author": "",
@@ -23,7 +23,7 @@
     "nodemon": "^2.0.9"
   },
   "build": {
-    "appId": "333",
+    "appId": "electron-pratice",
     "productName": "Tasky33",
     "copyright": "Copyright © 2021 Alaso",
     "directories": {
@@ -31,7 +31,10 @@
       "output": "dist"
     },
     "publish": [
-      "github"
+      {
+        "provider": "github",
+        "releaseType": "release"
+      }
     ],
     "mac": {
       "target": [
