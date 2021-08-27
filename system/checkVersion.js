@@ -4,15 +4,15 @@ const {dialog, ipcMain} = require('electron')
 function checkUpdate(){
     const web = global.win.webContents
     web.send('setTask', '这是测试')
-  if(process.platform == 'darwin'){  
+  // if(process.platform == 'darwin'){  
   
-    //我们使用koa-static将静态目录设置成了static文件夹，
-    //所以访问http://127.0.0.1:9005/darwin，就相当于访问了static/darwin文件夹，win32同理
-    autoUpdater.setFeedURL('https://github.com/liulangjun/electron-mac/releases/download/release-v1.0.0')  //设置要检测更新的路径
+  //   //我们使用koa-static将静态目录设置成了static文件夹，
+  //   //所以访问http://127.0.0.1:9005/darwin，就相当于访问了static/darwin文件夹，win32同理
+  //   autoUpdater.setFeedURL('https://github.com/liulangjun/electron-mac/releases')  //设置要检测更新的路径
     
-  }else{
-    autoUpdater.setFeedURL('https://github.com/liulangjun/electron-mac/releases/download/release-v1.0.0')
-  }
+  // }else{
+  //   autoUpdater.setFeedURL('https://github.com/liulangjun/electron-mac/releases')
+  // }
   
   //检测更新
   autoUpdater.checkForUpdates()

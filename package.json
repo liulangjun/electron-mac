@@ -1,6 +1,6 @@
 {
   "name": "electron-p",
-  "version": "1.0.7",
+  "version": "1.0.6",
   "description": "electron-demo",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "nodemon --watch main.js --exec 'electron .'",
     "dev": "electron .",
     "pack": "electron-builder",
-    "release": "cross-env GITHUB_TOKEN=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 electron-builder",
+    "release": "cross-env GITHUB_TOKEN=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 electron-builder",
     "icon": "electron-icon-builder --input=./public/logo.png --output=./build --flatten"
   },
   "author": "",
