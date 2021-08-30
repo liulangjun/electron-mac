@@ -1,5 +1,6 @@
 const { autoUpdater } = require('electron-updater')
 const {dialog, ipcMain} = require('electron')
+const log = require('electron-log')
 
 function checkUpdate(){
     const web = global.win.webContents
@@ -13,7 +14,7 @@ function checkUpdate(){
   // }else{
   //   autoUpdater.setFeedURL('https://github.com/liulangjun/electron-mac/releases')
   // }
-  
+  autoUpdater.logger = log
   //检测更新
   autoUpdater.checkForUpdates()
   

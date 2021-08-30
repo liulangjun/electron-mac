@@ -1,14 +1,15 @@
 {
   "name": "electron-p",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "description": "electron-demo",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --watch main.js --exec 'electron .'",
     "dev": "electron .",
-    "pack": "electron-builder",
-    "release": "cross-env GITHUB_TOKEN=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 electron-builder",
+    "dist": "electron-builder",
+    "pack": "electron-builder --dir",
+    "release": "cross-env GITHUB_TOKEN=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 electron-builder",
     "icon": "electron-icon-builder --input=./public/logo.png --output=./build --flatten"
   },
   "author": "",
@@ -66,6 +67,7 @@
     }
   },
   "dependencies": {
+    "electron-log": "^4.4.1",
     "electron-updater": "^4.3.9"
   }
 }
