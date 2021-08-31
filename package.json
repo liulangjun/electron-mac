@@ -32,6 +32,9 @@
       "buildResources": "build",
       "output": "dist"
     },
+    "files": [
+      "!/test.js"
+    ],
     "publish": [
       {
         "provider": "github",
