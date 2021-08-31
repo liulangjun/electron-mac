@@ -33,7 +33,7 @@
       "output": "dist"
     },
     "files": [
-      "!/test.js"
+      "!**/test.js"
     ],
     "publish": [
       {
