@@ -1,6 +1,6 @@
 {
   "name": "electron-p",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "description": "electron-demo",
   "main": "main.js",
   "scripts": {
@@ -9,9 +9,9 @@
     "dev": "electron .",
     "dist": "electron-builder",
     "pack": "electron-builder --dir",
-    "release": "cross-env GITHUB_TOKEN=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 electron-builder",
+    "release": "cross-env GITHUB_TOKEN=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 electron-builder",
     "icon": "electron-icon-builder --input=./public/logo.png --output=./build --flatten",
-    "pack-win": "electron-builder -wml"
+    "pack-mac": "electron-builder -m"
   },
   "author": "",
   "license": "ISC",
@@ -47,7 +47,6 @@
     },
     "dmg": {
       "icon": "build/icons/icon.icns",
-      "sign": false,
       "iconSize": 100,
       "contents": [
         {
